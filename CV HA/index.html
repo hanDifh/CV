@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatibla" content="IE=edge">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <link rel="icon"type="image/png" href="img/favicon.png">
+    <title>CV </title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body >
+<div class="profile">
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230426115225/computer-image-660.jpg" >
+</div>
+    
+    
+<div class ="profile-info">
+   <h1> Hanadi Fahad</h1>
+   <p class="about">خريجه من جامعة القصيم و متدربه في بانوراما للبرمجة 
+   </p>
+   <!--services-->
+ <h2>Services</h2>
+ <div class="services">
+    <img src="https://media.gcflearnfree.org/content/55e0730c7dd48174331f5164_01_17_2014/whatisacomputer_pc.jpg">
+    <p> <b> Web Desiging</b></p>
+
+ </div>
+ <!-- form eamail-->
+  <div class="form-box">
+    <h2>Contact Me</h2>
+    <form>
+        <div class="input-group">
+            <input type="text" placeholder="First name" >
+            <input type="text" placeholder="Last name">
+        </div>
+        <div class="input-group">
+            <input type="number" placeholder="Phone number" >
+            <input type="email" placeholder="Your mail">
+            </div>
+            <div class="text-area">
+                <textarea rows="4" placeholder="write your message">
+
+                </textarea>
+            </div>
+            <button type="submit" class="sub">send message</button> 
+    </form>
+  </div>
+       <!-- contact me-->
+ <div class="cont">
+    <span> hanadifh14@gmail.com</span>
+    <span> +5660987544</span>
+ </div>
+ 
+
+  
+
+ <div class="toggle-container">
+    <input type="checkbox" id="switch" class="toggle-checkbox">
+    <label for="switch" class="toggle-label"></label>
+
+ </div>
+<script src="script.js"></script>
+       
+</div>
+  <script> 
+const toggleSwitch = document.querySelector('#switch');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+
+toggleSwitch.addEventListener('change', function(event) {
+    if (event.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+});
+</script>
+
+
+    
+
+
+    
+</body>
+</html>
